@@ -1,0 +1,5 @@
+* Brehpass
+
+A web-based password manager.
+
+[[file:LICENSE][GNU General Public License v3.0]]
