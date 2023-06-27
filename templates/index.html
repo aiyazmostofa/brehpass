@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link href="/static/output.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header
+        class=" text-gray-100 absolute top-0 left-0 w-full lg:flex lg:bg-gray-900 justify-around items-center lg:p-3">
+        <div class="flex justify-around p-3 bg-gray-900 lg:block lg:p-0">
+            <h1 class="text-3xl font-semibold">Brehpass</h1>
+            <button onclick="toggleLoginMenu()" class="lg:hidden text-gray-900 bg-gray-50 hover:bg-gray-200 px-2 py-1 rounded-md" id="toggle">Login</button>
+        </div>
+        <div class="flex justify-around  lg:p-0">
+            <div></div>
+            <div class="p-3 bg-gray-800 hidden lg:block rounded-md mt-2 lg:mt-0" id="loginBar">
+                <form action="/" method="POST" class="lg:flex lg:justify-center items-center">
+                    <label class="block lg:mr-2" for="email">Email</label>
+                    <input class="block text-gray-900 bg-gray-100 rounded-md py-1 px-2" type="email" name="email"
+                        id="email">
+                    <label class="block mt-1 lg:ml-3 lg:mt-0 lg:mr-2" for="password">Password</label>
+                    <input class="block text-gray-900 bg-gray-100 rounded-md py-1 px-2" type="password" name="password"
+                        id="password">
+                    <input
+                        class="block bg-green-700 px-2 py-1 rounded-md mt-3  hover:bg-green-800 lg:mt-0 lg:ml-3 w-full"
+                        type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen justify-center items-center">
+        {{.Content}}
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
